@@ -1,23 +1,3 @@
-BRAINTREE: South African Bank Integrations
-
-# Table of Contents
-
-1. [Introduction](#introduction)
-2. [Activation](#activation)
-   - [App Activation](#app-activation)
-   - [Bank Activation](#bank-activation)
-3. [Key Features](#key-features)
-   - [Bank Statement Import](#bank-statement-import)
-   - [Payment Export](#payment-export)
-   - [API Integration for FNB Direct Debit Management](#api-integration-for-fnb-direct-debit-management)
-   - [Upgrade and Installation Automation](#upgrade-and-installation-automation)
-4. [Job Queue](#job-queue)
-5. [Troubleshooting](#troubleshooting)
-
-# Introduction
-
-The Braintree Bank Integration application extends the standard functionality of Microsoft Dynamics 365 Business Central by providing seamless integration with multiple banks for direct debit, payment export, and bank statement import processes. It is designed to streamline financial operations, improve automation, and ensure compliance with bank-specific formats and requirements.
-
 # Activation
 
 ## App Activation
