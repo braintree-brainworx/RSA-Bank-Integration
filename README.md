@@ -10,8 +10,8 @@ The methods of integration which are available vary between banks:
 |FNB| Yes | Yes | Yes | Yes | Yes | Yes |
 |Standard| Yes | Yes | | | | |
 
-## [First National Bank](FNBIntegrations.MD)
+## [First National Bank](FNBIntegration.MD)
 
-## [ABSA On-Prem](ABSAIntegration.md)
+## [ABSA On-Prem](ABSAIntegration.MD)
 
 ## [Standard Bank](StandardBankIntegration.md)
