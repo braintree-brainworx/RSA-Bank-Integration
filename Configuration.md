@@ -1,8 +1,11 @@
-BRAINTREE: South African Bank Integrations
+# Configuration
 
 # Table of Contents
-
-# Activation
+- [App Activation](#app-activation)
+- [Bank Activation](#bank-activation)
+- [General Ledger Setup](#general-ledger-setup)
+- [Bank Account](#bank-account)
+- [Customer Bank Account](#customer-bank-account)
 
 ## App Activation
 
@@ -36,30 +39,7 @@ If Production Active = No, it will target the bank’s sandbox environment. With
 
 > NOTE: You will not be able to enable it as Production Active in a Sandbox environment.
 
-# Key Features
-
-## Bank Statement Import
-
-- Functionality:
-  - File based import of bank statements in the required formats.
-  - Supports both standard and short formats for ABSA and Standard Bank.
-- Setup
-  - On Bank Account Card page, select the Bank Statement Import Format that relates to your bank account.
-
-## Payment Export
-
-- Functionality:
-  - Exports payment journal data in bank-specific formats.
-- Setup:
-  - On Bank Account Card page, select the Payment Export Format that relates to your bank account.
-
-## API Integration for FNB Direct Debit Management
-
-- Automates the creation, processing, and status updates of direct debit collections.
-- Supports SEPA-compliant direct debit mandates.
-- Only supports direct debit instructions for South African Banks in South African Rand.
-
-### General Ledger Setup
+## General Ledger Setup
 
 | Field | Value | Description |
 | --- | --- | --- |
@@ -71,7 +51,7 @@ If Production Active = No, it will target the bank’s sandbox environment. With
 
 ![alt text](./images/image-5.png)
 
-### Bank Account
+## Bank Account
 
 | Field | Value | Description |
 | --- | --- | --- |
@@ -89,7 +69,7 @@ If Production Active = No, it will target the bank’s sandbox environment. With
 
 ![alt text](./images/image-6.png)
 
-### Customer Bank Account
+## Customer Bank Account
 
 | Field | Value | Description |
 | --- | --- | --- |
@@ -118,13 +98,4 @@ If Production Active = No, it will target the bank’s sandbox environment. With
 Two jobs are automatically created with status set to On-Hold and must be set to Ready by a user.
 - FNB DD-Collections Report BTR: By default, checks daily for updates from the bank for Direct Debit Collections that have been submitted and updates the Direct Debit Collection Entries.
 - DD-Get Unpaids Update BTR: Refreshes the Unpaids Worksheet and updates the Direct Debit Collection Entries that have not yet been posted.
-
-# Troubleshooting
-
-If you encounter any issues or errors while using the South African Bank Integrations app, follow the troubleshooting steps below:
-
-- **Review Configuration**: Ensure that setups described in this document are complete and correct.
-- **Validate User Permissions**: Ensure that the users using this functionality have the necessary permissions.
-- **Contact Support**: If the issue persists, reach out to the support team, providing details such as error messages and the steps leading to the problem for efficient troubleshooting.
-
-Email: [bcsupport@braintree.co.za](mailto:bcsupport@braintree.co.za)
+  

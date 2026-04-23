@@ -1,8 +1,8 @@
 # First National Bank Integration
 
-# Key Features
+## Key Features
 
-## Bank Statement Import
+### Bank Statement Import
 
 - Functionality:
   - File based import of bank statements in the required formats.
@@ -10,38 +10,18 @@
 - Setup
   - On Bank Account Card page, select the Bank Statement Import Format that relates to your bank account.
 
-## Payment Export
+### Payment Export
 
 - Functionality:
   - Exports payment journal data in bank-specific formats.
 - Setup:
   - On Bank Account Card page, select the Payment Export Format that relates to your bank account.
 
-## API Integration for FNB Direct Debit Management
+### API Integration for FNB Direct Debit Management
 
 - Automates the creation, processing, and status updates of direct debit collections.
 - Supports SEPA-compliant direct debit mandates.
 - Only supports direct debit instructions for South African Banks in South African Rand.
-
-# Activation
-
-## App Activation
-
-In Business Central, search for and open "Braintree App Licenses"
-
-![alt text](./images/image-1.png)
-
-1. Enter your e-mail address
-2. Select the South African Bank Integrations entry
-3. Click Request Subscription/Trial License
-
-We will activate an evaluation license and send it to the email address you specified. The mail will contain a license key. Copy that license key then return to the Braintree App Licenses.
-
-![alt text](./images/image-2.png)
-
-1. Select the South African Bank Integrations entry
-2. Click Update License Key
-3. Enter the key on the page that opens and click Ok. You should get a message that states “Thank you for registering”
 
 ## Bank Activation
 
