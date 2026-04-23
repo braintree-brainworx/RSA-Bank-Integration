@@ -31,7 +31,7 @@ Not currently supported for Cloud, available for On Prem.
 
 ![alt text](<API integration.png>)
 
-- The Bank API Integration Type must be setup as ABSA
+- The Bank API Integration Type must be set up as ABSA
 - The Transaction Company Reference Prefix must be setup to populate the Transaction reference numbers on the Payment journal for submission.
 - The Other fields are all related to the ABSA environment for the correct connectivity and processing. 
 
@@ -49,6 +49,7 @@ Not currently supported for Cloud, available for On Prem.
 
   - Under the Payments information the Preferred Bank Account Code must be populated.
  
+
 ### Payment Journals
 
 *	Payment Batch setup

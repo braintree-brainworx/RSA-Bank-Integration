@@ -37,18 +37,6 @@ If Production Active = No, it will target the bank’s sandbox environment. With
 
 > NOTE: You will not be able to enable it as Production Active in a Sandbox environment.
 
-### General Ledger Setup
-
-| Field | Value | Description |
-| --- | --- | --- |
-| LCY Code | ZAR | Validation that local currency is South African Rand |
-| SEPA Non-Euro Export | Yes | This functionality is built on standard Business Central Direct Debit functionality. Single European Payments Area (SEPA), by default only supports EUR transactions. |
-| SEPA Export w/o Bank Acc. Data | Yes | If this field is disabled, Business Central checks that fields, not required for the export, are populated. We can disable those checks by enabling this setting. |
-
-![alt text](./images/image-4.png)
-
-![alt text](./images/image-5.png)
-
 ### Bank Account
 
 | Field | Value | Description |
@@ -56,7 +44,7 @@ If Production Active = No, it will target the bank’s sandbox environment. With
 | Bank Branch No. |  | Required |
 | Bank Account No. |  | Required |
 | Bank Account Type |  | Required |
-| SEPA Direct Debit Exp. Format | FNB-DD | During Direct Debit Export, this lets the system know which format to use. The Bank Integration app will then confirm if the selected bank account on the Direct Debit Collection has a Bank Export Format linked and confirm if it is relevant to a specific bank. Each export and their associated checks are therefor only done if appropriate. |
+| SEPA Direct Debit Exp. Format | FNB-DD | During Direct Debit Export, this lets the system know which format to use. The Bank Integration app will then confirm if the selected bank account on the Direct Debit Collection has a Bank Export Format linked and confirm if it is relevant to a specific bank. Each export and their associated checks are therefore only done if appropriate. |
 | Direct Debit Msg. Nos. |  | Required |
 | Creditor No. |  | This is the company abbreviation used in the export. |
 | Service Level |  | Required |
@@ -81,26 +69,3 @@ If Production Active = No, it will target the bank’s sandbox environment. With
 >NOTE: **SEPA Direct Debit Mandates**: No changes have been made to this table, just know that an active mandate is required for this > functionality to work.
 
 ![alt text](./images/image-7.png)
-
-## Upgrade and Installation Automation
-
-- Automatic Setup:
-  - Automatically creates required setups during app installation.
-  - Includes predefined mappings for bank-specific processing codeunits and data exchange definitions.
-  - User only needs to map the setups to the appropriate bank accounts.
-- Upgrade Support:
-  - Ensures smooth transitions during app upgrades by updating field mappings and configurations.
-
-# Job Queue
-
-Two jobs are automatically created with status set to On-Hold and must be set to Ready by a user.
-- FNB DD-Collections Report BTR: By default, checks daily for updates from the bank for Direct Debit Collections that have been submitted and updates the Direct Debit Collection Entries.
-- DD-Get Unpaids Update BTR: Refreshes the Unpaids Worksheet and updates the Direct Debit Collection Entries that have not yet been posted.
-
-# Troubleshooting
-
-If you encounter any issues or errors while using the South African Bank Integrations app, follow the troubleshooting steps below:
-
-- **Review Configuration**: Ensure that setups described in this document are complete and correct.
-- **Validate User Permissions**: Ensure that the users using this functionality have the necessary permissions.
-- **Contact Support**: If the issue persists, reach out to the support team, providing details such as error messages and the steps leading to the problem for efficient troubleshooting.
