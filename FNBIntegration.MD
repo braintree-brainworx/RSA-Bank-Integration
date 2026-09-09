@@ -31,13 +31,10 @@
 
 ## Bank Activation
 
-You need to obtain a Client ID and Client Secret from the bank to use the integration. Contact your company’s bank account manager to obtain these setups and enable your account for the integration.
-
-They will also be able to provide you with Sandbox setups if you want to try it out first.
-
-Add these setups to the Bank Integration Setup page.
-
-If Production Active = No, it will target the bank’s sandbox environment. With Production Active = Yes, it will target bank production environment.
+* Open the Bank Integration Setup page in Business Central.
+* You need to obtain a **Client ID** and **Client Secret** from the bank to use the integration. Contact your company’s bank account manager to obtain these setups and enable your account for the integration. They will also be able to provide you with Sandbox setups if you want to try it out first.
+* **Confirm ZAR Currency**, when the GL Setup LCY Code is _not_ set to the ISO Code "ZAR", confirmation is required that the local currency is ZAR, which is required for the integration.
+* If **Production Active** = _No_, it will target the bank’s sandbox environment. With Production Active = Yes, it will target bank production environment.
 
 ![alt text](./images/image-3.png)
 
@@ -114,6 +111,32 @@ All enabled criteria must be returned as **Yes** for **AVS Verified** to be enab
 
 ![alt text](./images/image-avs-1.png)
 
+#### AVS Email Setup
+
+When an Account Verification Service (AVS) response is received, Business Central queues a notification email for the user who submitted the verification request. Configure both the sender account and the requesting user's recipient address.
+
+#### Configure the Sender Account
+
+1. Search for and open **Email Accounts**.
+2. Select **New**, choose the email account type, and complete the assisted setup.
+3. Send a test email to confirm that the account can send messages.
+4. Assign the **AVS Scenario** email scenario to the account.
+
+The account assigned to **AVS Scenario** is used as the sender for AVS result notifications.
+
+![alt text](./images/image-avs-7.png)
+
+#### Configure the Recipient Address
+
+The notification is sent to the user who selected **Verify Account**. Business Central uses the first populated address in this order:
+
+1. **Contact Email** on the User Card.
+2. **Authentication Email** on the User Card.
+3. **E-Mail** on the User Setup page.
+
+Ensure that at least one of these fields contains a valid email address for every user who submits AVS requests. If all three fields are blank, no notification is sent, but the result remains available on the bank account card and the **Account Verification Requests** page.
+
+
 ### Prepare the Account Holder Contact
 
 AVS uses a contact linked to the customer or vendor as the account holder. Create or update the contact before submitting a verification request.
@@ -188,5 +211,3 @@ On the Account Verification Requests page:
 - If a request remains **Submitted**, check the Job Queue Entries page and confirm that the scheduled AVS retrieval entry can run.
 - If a request is **Failed**, review **Status Reason Information** and **Response Content**, correct the underlying data or connectivity issue, and submit a new verification request.
 - If no result email is received, review the AVS email scenario and email account setup. The result remains available from the bank account FactBox and Account Verification Requests page.
-
-![alt text](./images/image-avs-7.png)
